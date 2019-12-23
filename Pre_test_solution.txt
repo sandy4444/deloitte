@@ -1,0 +1,24 @@
+void main()
+{
+
+char a[]="welcome";
+int i,j=0,count=0;
+int a=strlen(a);
+char rr[a];
+ for(i=a-1;i<0;i--)
+{
+ rr[j]= a[i];
+j++;
+}
+
+for(i=0;i<a;i++)
+{
+if(a[i]='a'||a[i]='A'||a[i]='e'||a[i]='E'||a[i]='i'||a[i]='I'||a[i]='o'||a[i]='O'||a[i]='u'||a[i]='U')
+count++;
+}
+
+cout<<rr<<endl;
+cout<<"no of vowels:"<<count;
+
+}
+
