@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<script type="text/javascript">
+		function validate()
+		{
+			unspan=document.getElementById('usname');
+			gspan=document.getElementById('gend');
+			cspan=document.getElementById('comm');
+			username=document.getElementById('un').value;
+			gendervalue=document.getElementById('gender').value;
+			commentvalue=document.getElementById('com').value;
+			if(username.length==0)
+			{
+				alert("Please enter the name");
+			}
+			else
+			{
+				unspan.innerText=username;
+				gspan.innerText=gendervalue;
+				cspan.innerText=commentvalue;
+			}
+
+			
+		}
+	</script>
+</head>
+<body>
+<form>
+	<table align="center" border="2" bgcolor="pink">
+		<tr><td>User Name:</td>
+			<td><input type="text" name="un" id="un"></td></tr>
+		<tr><td>Spouse Name:</td>
+			<td><input type="text" name="sn" id="sn"></td></tr>
+		<tr><td rowspan="2">Gender:</td>
+			<td><input type="radio" id="gender" name="gender" value="Male" checked>Male</td></tr>
+			<tr><td><input type="radio" id="gender"name="gender" value="Female">Female</td></tr>
+		<tr><td rowspan="2">Comments:</td>
+		     <td><input type="radio" id="com" name="com" value="Like" checked>Likes</td></tr>
+		     <tr><td><input type="radio" id="com" name="com" value="Don't Like">Don't Like</td></tr>
+		<tr> <td colspan="2" align="center"><input type="button" value="Submit" onclick="validate()"></td></tr>
+		<tr><td colspan="2">User name:<span id="usname"></span></td></tr>
+		<tr><td colspan="2">Gender:<span id="gend"></span></td></tr>
+		<tr><td colspan="2">Comments:<span id="comm"></span></td></tr>
+	</table>
+</form>
+</body>
+</html>
